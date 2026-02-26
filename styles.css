@@ -136,6 +136,46 @@ body {
   visibility: visible;
 }
 
+/* Main Layout */
+.main_container {
+  max-width: 900px;
+  /* margin: 0 auto; */
+  padding: 3rem 1.5rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Image Block */
+.flair {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.flair_image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Caption */
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 /* ---------------- */
 .logo {
   padding: 10px;
@@ -143,12 +183,6 @@ body {
   width: 150px;
 }
 
-/* ---------------- */
-.flair_image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 /* ---------------- */
 .footer {
   height: 50px; /* adjust as needed */
