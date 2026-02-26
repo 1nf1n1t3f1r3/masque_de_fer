@@ -27,9 +27,8 @@ body {
 /* --------------------------- */
 
 /* Make body the full height flex container */
+/* Make body a simple background container, still full height */
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   font-family:
     system-ui,
@@ -37,6 +36,17 @@ body {
     BlinkMacSystemFont,
     sans-serif;
   line-height: 1.5;
+  display: block; /* no need for flex here anymore */
+}
+
+/* Page wrapper centers content with max width */
+.page_wrapper {
+  max-width: 1200px; /* adjust as needed */
+  margin: 0 auto; /* center horizontally */
+  width: 100%; /* shrinks on smaller screens */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures footer sticks at bottom */
 }
 
 /* Header */
