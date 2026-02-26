@@ -70,7 +70,6 @@ body {
 }
 
 .nav_menu a:hover {
-  color: var(--masque_de_fer-green); /* highlight color */
   text-decoration: underline; /* restore underline on hover */
 }
 
