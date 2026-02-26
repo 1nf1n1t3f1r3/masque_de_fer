@@ -55,6 +55,15 @@ body {
   padding-right: 20%; /* optional, symmetrical spacing */
 
   background-color: var(--masque_de_fer-green);
+  background-color: rgb(5, 82, 31, 0.975);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(6px);
 }
 
 .main {
@@ -153,7 +162,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-p {
+p .main_container {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
