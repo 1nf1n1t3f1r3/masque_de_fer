@@ -17,6 +17,15 @@ body {
   height: 100%;
 }
 
+/* 4. Custom Vars: Colour Pickers */
+:root {
+  --masque_de_fer-blue: #11218c;
+  --masque_de_fer-green: #045220;
+  --masque_de_fer-yellow: #fae81c;
+}
+
+/* --------------------------- */
+
 /* Make body the full height flex container */
 body {
   display: flex;
@@ -36,12 +45,72 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: yellow;
+  background-color: var(--masque_de_fer-yellow);
+}
+
+/* Header Dropdowns */
+.nav_menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_menu li {
+  position: relative;
+}
+
+.nav_menu a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.nav_menu a:hover {
+  color: var(--masque_de_fer-green); /* highlight color */
+  text-decoration: underline; /* restore underline on hover */
+}
+
+/* Dropdown Menus */
+.dropdown_menu {
+  position: absolute;
+  top: 100%; /* directly below parent */
+  left: 0;
+  background-color: #222;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+
+  /* Fading effect setup */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 1000; /* above other content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown_menu li a {
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.dropdown_menu li a:hover {
+  background-color: var(--masque_de_fer-green);
+}
+
+/* Show dropdown on hover with fade */
+.dropdown:hover .dropdown_menu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .logo {
-  /* height: 150px; /* adjust as needed */
-  width: 150px; */
+  height: 150px; /* adjust as needed */
+  width: 150px;
 }
 
 .header_content,
@@ -67,7 +136,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: blue;
+  background-color: var(--masque_de_fer-blue);
   padding: 2rem;
 }
 
@@ -77,5 +146,5 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: yellow;
+  background-color: var(--masque_de_fer-yellow);
 }
