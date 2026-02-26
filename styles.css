@@ -1,0 +1,81 @@
+/* 1. Better box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Make body full height */
+html,
+body {
+  height: 100%;
+}
+
+/* Make body the full height flex container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: yellow;
+}
+
+.logo {
+  /* height: 150px; /* adjust as needed */
+  width: 150px; */
+}
+
+.header_content,
+.footer_content {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Header Text Buttons */
+.header_link .footer_link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.header_link:hover .footer_link:hover {
+  text-decoration: underline;
+}
+
+/* Main content grows to fill space */
+.content_container {
+  flex: 1; /* THIS is the key */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: blue;
+  padding: 2rem;
+}
+
+/* Footer stays at bottom */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: yellow;
+}
