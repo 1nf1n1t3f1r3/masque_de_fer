@@ -42,6 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* ensures footer stays at bottom */
+  overflow-x: hidden;
 }
 
 /* Padding, Coloring */
@@ -52,7 +53,7 @@ body {
   justify-content: space-between;
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
-  overflow: hidden;
+
   background-color: var(--masque_de_fer-green);
 }
 
@@ -60,7 +61,7 @@ body {
   flex: 1; /* grow to fill remaining space */
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
-  overflow: hidden;
+
   background-color: var(--masque_de_fer-blue);
   color: var(--masque_de_fer-yellow);
 }
@@ -72,8 +73,9 @@ body {
   justify-content: space-between;
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
-  overflow: hidden;
+
   background-color: var(--masque_de_fer-green);
+  min-height: 50px;
 }
 
 /* ---------------- */
@@ -139,8 +141,10 @@ body {
 /* Main Layout */
 .main_container {
   max-width: 900px;
-  /* margin: 0 auto; */
+  margin: 1.5rem auto;
   padding: 3rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
 }
 
 /* Typography */
@@ -157,6 +161,7 @@ p {
 /* Image Block */
 .flair {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -167,6 +172,11 @@ p {
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.flair_image:hover {
+  transform: scale(1.02);
 }
 
 /* Caption */
