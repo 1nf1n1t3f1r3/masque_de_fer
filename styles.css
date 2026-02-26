@@ -24,41 +24,60 @@ body {
   --masque_de_fer-yellow: #fae81c;
 }
 
-/* --------------------------- */
-
-/* Make body the full height flex container */
-/* Make body a simple background container, still full height */
+/* 5. Font Etc.  */
 body {
-  min-height: 100vh;
   font-family:
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
   line-height: 1.5;
-  display: block; /* no need for flex here anymore */
+  margin: 0;
 }
 
-/* Page wrapper centers content with max width */
-.page_wrapper {
-  max-width: 1200px; /* adjust as needed */
-  margin: 0 auto; /* center horizontally */
-  width: 100%; /* shrinks on smaller screens */
+/* ---------------- */
+
+/* Body as a column flex container */
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* ensures footer sticks at bottom */
+  min-height: 100vh; /* ensures footer stays at bottom */
 }
 
-/* Header */
+/* Padding, Coloring */
 .header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: var(--masque_de_fer-yellow);
+  padding-left: 20%;
+  padding-right: 20%; /* optional, symmetrical spacing */
+  overflow: hidden;
+  background-color: var(--masque_de_fer-green);
 }
 
-/* Header Dropdowns */
+.main {
+  flex: 1; /* grow to fill remaining space */
+  padding-left: 20%;
+  padding-right: 20%; /* optional, symmetrical spacing */
+  overflow: hidden;
+  background-color: var(--masque_de_fer-blue);
+  color: var(--masque_de_fer-yellow);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%; /* optional, symmetrical spacing */
+  overflow: hidden;
+  background-color: var(--masque_de_fer-green);
+}
+
+/* ---------------- */
+/* Nav Menus & Dropdowns */
 .nav_menu {
   list-style: none;
   display: flex;
@@ -75,7 +94,7 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   display: block;
-  color: black;
+  color: var(--masque_de_fer-yellow);
   transition: color 0.2s ease;
 }
 
@@ -108,7 +127,7 @@ body {
 }
 
 .dropdown_menu li a:hover {
-  background-color: var(--masque_de_fer-green);
+  color: var(--masque_de_fer-yellow);
 }
 
 /* Show dropdown on hover with fade */
@@ -117,43 +136,31 @@ body {
   visibility: visible;
 }
 
+/* ---------------- */
 .logo {
-  height: 150px; /* adjust as needed */
+  padding: 10px;
+  height: 100px;
   width: 150px;
 }
 
-.header_content,
-.footer_content {
-  display: flex;
-  gap: 2rem;
+/* ---------------- */
+.flair_image {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-/* Header Text Buttons */
-.header_link .footer_link {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.header_link:hover .footer_link:hover {
-  text-decoration: underline;
-}
-
-/* Main content grows to fill space */
-.content_container {
-  flex: 1; /* THIS is the key */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: var(--masque_de_fer-blue);
-  padding: 2rem;
-}
-
-/* Footer stays at bottom */
+/* ---------------- */
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: var(--masque_de_fer-yellow);
+  height: 50px; /* adjust as needed */
+}
+
+/* ---------------- */
+/* Small screens */
+@media (max-width: 768px) {
+  .header,
+  .main,
+  .footer {
+    padding-left: 1rem; /* much smaller padding */
+    padding-right: 1rem;
+  }
 }
