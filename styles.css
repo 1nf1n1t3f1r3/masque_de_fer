@@ -216,4 +216,14 @@ figcaption {
     padding-left: 1rem; /* much smaller padding */
     padding-right: 1rem;
   }
+
+  .nav_menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    height: 60px;
+    width: auto;
+  }
 }
