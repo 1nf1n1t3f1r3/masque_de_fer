@@ -20,10 +20,17 @@ body {
 /* 4. Custom Vars: Colour Pickers */
 :root {
   --masque_de_fer-blue: #11218c;
-  --masque_de_fer-blue_light: #e6e9ff;
-  --masque_de_fer-blue_card: #1a2bb8;
+  --masque_de_fer-blue_medium: #1a2bb8;
+  --masque_de_fer-blue_light: #bcc3fa;
+
   --masque_de_fer-green: #045220;
+  --masque_de_fer-green_medium: #188d43;
+  --masque_de_fer-green_light: #5aca83;
+
   --masque_de_fer-yellow: #fae81c;
+  --masque_de_fer-yellow_medium: #fcf284;
+  --masque_de_fer-yellow_light: #fffabf;
+
   --masque_de_fer-white: #ffffff;
   --masque_de_fer-grey: #ffffff6e;
   --masque_de_fer-black: #000000;
@@ -59,12 +66,8 @@ body {
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
 
-  background-color: var(--masque_de_fer-green);
-  background-color: rgb(5, 82, 31, 0.975);
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: var(--masque_de_fer-blue_medium);
+  border-bottom: 3px solid #fae81c;
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 
@@ -72,12 +75,6 @@ body {
 }
 
 .main {
-  flex: 1; /* grow to fill remaining space */
-  padding-left: 20%;
-  padding-right: 20%; /* optional, symmetrical spacing */
-
-  background-color: var(--masque_de_fer-blue_light);
-  color: var(--masque_de_fer-white);
 }
 
 .footer {
@@ -88,7 +85,9 @@ body {
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
 
-  background-color: var(--masque_de_fer-green);
+  border-top: 3px solid #fae81c;
+  background-color: var(--masque_de_fer-blue_medium);
+  color: var(--masque_de_fer-white);
   min-height: 50px;
 }
 
@@ -139,7 +138,7 @@ body {
 
 .dropdown_menu li a {
   padding: 10px 15px;
-  color: #fff;
+  color: var(--masque_de_fer-white);
 }
 
 .dropdown_menu li a:hover {
@@ -152,15 +151,36 @@ body {
   visibility: visible;
 }
 
+.main {
+  flex: 1; /* grow to fill remaining space */
+  padding-left: 20%;
+  padding-right: 20%; /* optional, symmetrical spacing */
+
+  background-color: var(--masque_de_fer-white);
+  color: var(--masque_de_fer-black);
+}
+
 /* Main Layout */
 .card {
   max-width: 900px;
   margin: 1.5rem auto;
   padding: 3rem 1.5rem;
-  background-color: var(--masque_de_fer-blue_card);
+  /* background-color: var(--masque_de_fer-blue_medium); */
+  background-color: rgba(0, 0, 0, 0.0125);
+  /* background-color: #11218c3a; */
 
   border-radius: 12px;
-  box-shadow: 0 5px 10px var(--masque_de_fer-blue_card);
+  box-shadow: 0 8px 24px rgba(30, 46, 192, 0.452);
+
+  /* Hover */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(2px);
+  box-shadow: 0 8px 24px rgb(30, 46, 192);
 }
 
 /* Typography */
@@ -188,11 +208,6 @@ h1 {
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.flair_image:hover {
-  transform: scale(1.02);
 }
 
 /* Caption */
