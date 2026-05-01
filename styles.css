@@ -20,8 +20,13 @@ body {
 /* 4. Custom Vars: Colour Pickers */
 :root {
   --masque_de_fer-blue: #11218c;
+  --masque_de_fer-blue_light: #e6e9ff;
+  --masque_de_fer-blue_card: #1a2bb8;
   --masque_de_fer-green: #045220;
   --masque_de_fer-yellow: #fae81c;
+  --masque_de_fer-white: #ffffff;
+  --masque_de_fer-grey: #ffffff6e;
+  --masque_de_fer-black: #000000;
 }
 
 /* 5. Font Etc.  */
@@ -71,8 +76,8 @@ body {
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
 
-  background-color: var(--masque_de_fer-blue);
-  color: var(--masque_de_fer-yellow);
+  background-color: var(--masque_de_fer-blue_light);
+  color: var(--masque_de_fer-white);
 }
 
 .footer {
@@ -148,12 +153,14 @@ body {
 }
 
 /* Main Layout */
-.main_container {
+.card {
   max-width: 900px;
   margin: 1.5rem auto;
   padding: 3rem 1.5rem;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--masque_de_fer-blue_card);
+
   border-radius: 12px;
+  box-shadow: 0 5px 10px var(--masque_de_fer-blue_card);
 }
 
 /* Typography */
@@ -162,7 +169,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.main_container p {
+.card p {
   margin-bottom: 2.5rem;
   font-size: 1.1rem;
 }
