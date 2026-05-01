@@ -21,10 +21,10 @@ body {
 :root {
   --masque_de_fer-blue: #11218c;
   --masque_de_fer-blue_medium: #1a2bb8;
-  --masque_de_fer-blue_light: #bcc3fa;
+  --masque_de_fer-blue_light: #1a2bb8;
 
-  --masque_de_fer-green: #045220;
-  --masque_de_fer-green_medium: #188d43;
+  --masque_de_fer-green: #045221;
+  --masque_de_fer-green_medium: #0e7433;
   --masque_de_fer-green_light: #5aca83;
 
   --masque_de_fer-yellow: #fae81c;
@@ -79,9 +79,9 @@ body {
     box-shadow 0.2s ease;
 }
 
-.header:hover {
+/* .header:hover {
   box-shadow: 0 8px 24px var(--masque_de_fer-blue_medium);
-}
+} */
 
 .main {
 }
@@ -94,7 +94,7 @@ body {
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
 
-  border-top: 3px solid #fae81c;
+  border-top: 3px solid var(--masque_de_fer-yellow);
   background-color: var(--masque_de_fer-blue_medium);
   color: var(--masque_de_fer-white);
   min-height: 50px;
@@ -105,9 +105,9 @@ body {
     box-shadow 0.2s ease;
 }
 
-.footer:hover {
+/* .footer:hover {
   box-shadow: 0 8px 24px var(--masque_de_fer-blue_medium);
-}
+} */
 
 /* ---------------- */
 /* Nav Menus & Dropdowns */
@@ -176,9 +176,9 @@ body {
 
   background: linear-gradient(
     90deg,
-    var(--masque_de_fer-blue_light) 0%,
-    #ffffff 50%,
-    var(--masque_de_fer-blue_light) 100%
+    var(--masque_de_fer-green) 0%,
+    var(--masque_de_fer-white) 50%,
+    var(--masque_de_fer-green) 100%
   );
   /* background-color: var(--masque_de_fer-white); */
   color: var(--masque_de_fer-black);
@@ -204,8 +204,8 @@ body {
 }
 
 .card:hover {
-  transform: translateY(2px);
-  box-shadow: 0 8px 24px rgb(30, 46, 192);
+  transform: translateY(0px);
+  box-shadow: 0 8px 24px rgb(81, 91, 180);
 }
 
 /* Typography */
