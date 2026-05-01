@@ -67,11 +67,20 @@ body {
   padding-right: 20%; /* optional, symmetrical spacing */
 
   background-color: var(--masque_de_fer-blue_medium);
-  border-bottom: 3px solid #fae81c;
+  border-bottom: 3px solid var(--masque_de_fer-yellow);
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 
   backdrop-filter: blur(6px);
+
+  /* Hover */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.header:hover {
+  box-shadow: 0 8px 24px var(--masque_de_fer-blue_medium);
 }
 
 .main {
@@ -89,6 +98,15 @@ body {
   background-color: var(--masque_de_fer-blue_medium);
   color: var(--masque_de_fer-white);
   min-height: 50px;
+
+  /* Hover */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.footer:hover {
+  box-shadow: 0 8px 24px var(--masque_de_fer-blue_medium);
 }
 
 /* ---------------- */
@@ -156,7 +174,13 @@ body {
   padding-left: 20%;
   padding-right: 20%; /* optional, symmetrical spacing */
 
-  background-color: var(--masque_de_fer-white);
+  background: linear-gradient(
+    90deg,
+    var(--masque_de_fer-blue_light) 0%,
+    #ffffff 50%,
+    var(--masque_de_fer-blue_light) 100%
+  );
+  /* background-color: var(--masque_de_fer-white); */
   color: var(--masque_de_fer-black);
 }
 
@@ -165,8 +189,9 @@ body {
   max-width: 900px;
   margin: 1.5rem auto;
   padding: 3rem 1.5rem;
-  /* background-color: var(--masque_de_fer-blue_medium); */
-  background-color: rgba(0, 0, 0, 0.0125);
+
+  background-color: var(--masque_de_fer-white);
+  /* background-color: rgba(0, 0, 0, 0.0125); */
   /* background-color: #11218c3a; */
 
   border-radius: 12px;
