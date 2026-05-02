@@ -76,12 +76,6 @@ body {
 }
 
 .main {
-  flex: 1; /* grow to fill remaining space */
-  padding-left: 20%;
-  padding-right: 20%; /* optional, symmetrical spacing */
-
-  /* background-color: var(--masque_de_fer-white); */
-  color: var(--masque_de_fer-black);
 }
 
 .footer {
@@ -167,16 +161,13 @@ body {
   visibility: visible;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .nav_menu {
-    flex-direction: column;
-  }
+.main {
+  flex: 1; /* grow to fill remaining space */
+  padding-left: 20%;
+  padding-right: 20%; /* optional, symmetrical spacing */
 
-  .dropdown_menu {
-    position: static;
-    display: block; /* always visible */
-  }
+  /* background-color: var(--masque_de_fer-white); */
+  color: var(--masque_de_fer-black);
 }
 
 /* Main Layout */
