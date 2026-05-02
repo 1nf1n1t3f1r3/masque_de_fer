@@ -98,6 +98,16 @@ img {
   justify-self: start;
 }
 
+/* Hamburger */
+.menu_toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 /* Nav */
 .nav_menu {
   display: flex;
@@ -215,10 +225,19 @@ figcaption {
     align-items: flex-start;
   }
 
+  .menu_toggle {
+    display: block;
+  }
+
   .nav_menu {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav_menu.active {
+    display: flex;
   }
 
   .dropdown_menu {
@@ -227,7 +246,6 @@ figcaption {
     visibility: visible;
     background: #333;
     box-shadow: none;
-    margin-top: 0.25rem;
   }
 
   .main {
