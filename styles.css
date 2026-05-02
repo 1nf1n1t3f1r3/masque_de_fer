@@ -229,6 +229,10 @@ figcaption {
     align-items: flex-start;
   }
 
+  .header_inner {
+    flex-wrap: wrap; /* 👈 THIS is the key */
+  }
+
   .menu_toggle {
     font-size: 1.2rem;
     font-weight: 600;
@@ -242,6 +246,7 @@ figcaption {
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
+    order: 3; /* 👈 push it below logo + button */
   }
 
   .nav_menu a {
