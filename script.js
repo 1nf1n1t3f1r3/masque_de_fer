@@ -27,3 +27,12 @@ fetch("partials/header.html")
       });
     });
   });
+
+// Load footer
+fetch("partials/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    document.getElementById("footer").innerHTML = data;
+
+    // footer-related JS (if any later)
+  });
