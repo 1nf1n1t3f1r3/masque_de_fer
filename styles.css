@@ -9,6 +9,8 @@
 * {
   margin: 0;
   padding: 0;
+  outline: 1px solid red;
+  max-width: 100vw;
 }
 
 /* 3. Make body full height */
@@ -115,7 +117,7 @@ body {
   position: relative;
 }
 
-.nav_menu p {
+.nav_menu a {
   text-decoration: none;
   padding: 10px 15px;
   display: block;
@@ -250,13 +252,20 @@ figcaption {
     padding-right: 1rem;
   }
 
+  .header,
+  .footer {
+    flex-wrap: wrap;
+  }
+
   .nav_menu {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 
   .logo {
-    height: 60px;
+    height: 55px;
     width: auto;
+    flex-shrink: 0;
   }
 }
