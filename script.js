@@ -4,23 +4,15 @@ fetch("partials/header.html")
   .then((data) => {
     document.getElementById("header").innerHTML = data;
 
-    // 2. AFTER header exists → attach JS behavior
+    // NOW the elements exist in the DOM
 
-    const toggle = document.querySelector(".menu_toggle");
-    const menu = document.querySelector(".nav_menu");
+    const isMobile = () => window.innerWidth <= 768;
 
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-      });
-    }
-
-    // Optional: dropdown click behavior (better for mobile)
     document.querySelectorAll(".dropdown > a").forEach((link) => {
       link.addEventListener("click", (e) => {
         const submenu = link.nextElementSibling;
 
-        if (submenu) {
+        if (isMobile() && submenu) {
           e.preventDefault();
           submenu.classList.toggle("open");
         }
