@@ -89,7 +89,7 @@ img {
 
 /* Logo */
 .logo {
-  height: 60px;
+  height: 75px;
   width: auto;
   flex-shrink: 0;
 }
@@ -124,6 +124,10 @@ img {
   color: var(--yellow);
   padding: 0.5rem 0.75rem;
   display: block;
+
+  letter-spacing: 0.02em;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* Dropdown */
