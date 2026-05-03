@@ -56,6 +56,17 @@ img {
   display: block;
 }
 
+p a {
+  font-weight: 600;
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px solid green;
+}
+
+p a:hover {
+  border-bottom: yellow;
+}
+
 /* =========================
    4. Layout Containers
 ========================= */
@@ -198,10 +209,31 @@ img {
   text-align: center;
 }
 
+.flair img {
+  margin: 0 auto;
+}
+
 figcaption {
+  align-items: center;
   font-size: 0.9rem;
   opacity: 0.8;
   margin-top: 0.5rem;
+}
+
+.flair_clickable {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.flair_clickable:hover {
+  transform: scale(1.015);
+  opacity: 0.9;
+}
+
+.flair_clickable {
+  display: inline-block; /* ensures hover area matches image */
+  cursor: pointer;
 }
 
 /* =========================
