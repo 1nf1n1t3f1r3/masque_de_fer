@@ -257,7 +257,7 @@ figcaption {
   border-top: 3px solid var(--yellow);
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
