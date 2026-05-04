@@ -67,6 +67,11 @@ p a:hover {
   border-bottom: yellow;
 }
 
+ul {
+  list-style-position: outside;
+  padding-left: 1.5rem; /* adjust to taste */
+}
+
 /* =========================
    4. Layout Containers
 ========================= */
