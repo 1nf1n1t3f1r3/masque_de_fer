@@ -56,7 +56,8 @@ img {
   display: block;
 }
 
-p a {
+p a,
+.contact-box ul a {
   font-weight: 600;
   color: blue;
   text-decoration: none;
@@ -67,7 +68,8 @@ p a:hover {
   border-bottom: yellow;
 }
 
-ul {
+ul,
+li {
   list-style-position: outside;
   padding-left: 1.5rem; /* adjust to taste */
 }
