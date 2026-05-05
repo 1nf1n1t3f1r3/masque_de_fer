@@ -210,6 +210,7 @@ li {
   margin-bottom: 1.5rem;
 }
 
+/* Contact Box */
 .contact-box {
   margin: 1.5rem 0 2rem;
   padding: 1.25rem;
@@ -259,6 +260,24 @@ li {
 .contact-box i {
   width: 1.2rem;
   text-align: center;
+}
+
+/* Info-Grid */
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-block {
+  padding: 1rem;
+  border-left: 3px solid var(--blue);
+  background: #f9faff;
+  border-radius: 8px;
+}
+
+.info-block p {
+  margin: 0;
 }
 
 /* Images section */
