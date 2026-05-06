@@ -74,6 +74,10 @@ li {
   padding-left: 1.5rem; /* adjust to taste */
 }
 
+h1 {
+  padding-bottom: 15px;
+}
+
 /* =========================
    4. Layout Containers
 ========================= */
@@ -180,6 +184,28 @@ li {
 
 .dropdown_menu a:hover {
   color: var(--yellow);
+}
+
+/* Nav Menu without Dropdowns */
+.nav_menu > li > a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* underline animatie */
+.nav_menu > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--yellow);
+  transition: width 0.25s ease;
+}
+
+.nav_menu > li:hover > a::after {
+  width: 100%;
 }
 
 /* =========================
